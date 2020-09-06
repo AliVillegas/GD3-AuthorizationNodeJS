@@ -1,6 +1,8 @@
+const userAccess = require('../validators/rightsValidator')
+
 exports.dashboard = (req, res) => {
-    if (req.user) {
-        if (req.user.role == 'admin') {
+    if (userAccess.userHasAccess(req)) {
+        if (userAccess.userHasAccess(req) == 'admin') {
             console.log("admin logged in  ")
             res.render('dashboard/dashboard', {
                 userData: req.user,

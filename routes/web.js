@@ -2,7 +2,6 @@ let router = require('express').Router();
 let homepageController = require('../controllers/HomepageController');
 let authController = require('../controllers/AuthController');
 let authValidator = require('../validators/AuthValidators');
-let rightsValidator = require('../validators/rightsValidator');
 
 let passport = require('passport');
 let dashboardController = require('../controllers/DashboardController')

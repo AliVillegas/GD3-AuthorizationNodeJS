@@ -15,7 +15,7 @@ router.get('/manage-users', dashboardController.manageUsers);
 router.post('/register', authValidator.store, authController.store);
 router.post('/login', passport.authenticate('local', { failureRedirect: '/login-fail', successRedirect: '/protected' }));
 router.get('/protected', authController.goToDashboard);
-router.get('/dashboard', dashboardController.dashboard)
+router.get('/dashboard', dashboardController.dashboard);
 router.get('/login-fail', authController.loginFailed);
-
+router.get('/logout', authController.logout);
 module.exports = router;

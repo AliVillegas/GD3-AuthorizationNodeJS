@@ -19,6 +19,11 @@ exports.register = (req, res) => {
 exports.goToDashboard = (req, res) => {
     return res.redirect('/dashboard');
 }
+
+exports.logout = (req, res) => {
+    req.logout();
+    res.redirect('/login')
+}
 exports.loginFailed = (req, res) => {
     req.flash('errors', 'Incorrect Credentials, please try again');
     return res.redirect('/login');

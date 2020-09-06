@@ -1,0 +1,32 @@
+
+{{#if status.length}}
+    <div class="alert alert-danger">
+      <ul>
+          <li>{{status}}</li>
+      </ul>
+    </div>
+    please login at: <button id="buttonToLogin" class="btn btn-primary" onclick=" window.location = '/login' " >Login</button>
+{{else}}
+<main role="main" class="container">
+  <div class="starter-template">
+    <h1>Welcome your personal dashboard: </h1>
+    <br>
+    <br>
+    <h2>This is your profile: </h2>
+    <h3>name: {{userData.name}} </h3>
+    <h3>email: {{userData.email}}</h3>
+    {{#if isAdmin}}
+        <h3> <button id="buttonToLogin" class="btn btn-primary" onclick=" window.location = '/manage-users' " >Manage users</button>
+    {{/if}}
+</h3>
+    <p class="lead">
+      <br>  
+    </p>
+    <p>
+      
+    </p>
+  </div>
+</main>
+
+{{/if}}
+

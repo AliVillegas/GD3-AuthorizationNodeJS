@@ -1,0 +1,41 @@
+
+{{#if status.length}}
+    <div class="alert alert-danger">
+      <ul>
+          <li>{{status}}</li>
+      </ul>
+    </div>
+{{else}}
+<main role="main" class="container">
+  <div class="starter-template">
+    <h1>Welcome the user management page: {{userData.name}} </h1>
+    {{#if isAdmin}}
+        <h3> <button id="buttonToLogin" class="btn btn-primary" onclick=" window.location = '/dashboard' " >Go To my dashboard</button>
+    <br>
+    <table cellpadding="1" cellspacing="1" class="table">
+    <tr>
+        <th>Name</th>
+        <th>Role</th>
+    </tr>
+    <tr>
+        <td>Leo Reed</td>
+        <td>user </td>
+    </tr>
+    <tr>
+        <td>Ezekiel Melendez</td>
+        <td>user </td>
+    </tr>
+    <tr>
+        <td>Abbot Suarez</td>
+        <td>user </td>
+    </tr>
+
+</table>
+    {{/if}}
+</h3>
+    
+  </div>
+</main>
+
+{{/if}}
+
